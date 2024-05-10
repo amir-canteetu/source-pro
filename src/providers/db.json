@@ -1,0 +1,218 @@
+{
+  "companies": [
+    {
+      "company_id": 1,
+      "company_name": "Tech Solutions Inc.",
+      "company_type": "service_provider",
+      "industry": "Information Technology",
+      "domain": "techsolutions.com",
+      "country": 1,
+      "address": "",
+      "city": "",
+      "province": "",
+      "employee_count": "",
+      "registration_number": "", 
+      "legal_status": "",
+      "tax_id": "",
+      "certifications": "",
+      "service_regions": "",
+      "operating_since": "",
+      "major_clients": "",
+      "social_media": "",
+      "past_projects": ""
+
+    },
+    {
+      "company_id": 2,
+      "company_name": "Global Logistics Ltd.",
+      "company_type": "procuring_company",
+      "industry": "Transportation",
+      "domain": "globallogistics.com",
+      "contact_id": 2
+    }
+  ],
+  "users": [
+    {
+      "user_id": 1,
+      "email": "shayla.e@techsolutions.com",
+      "first_name": "Shayla",
+      "last_name": "Evans",
+      "title_prefix": "Ms",
+      "company_id": 1,
+      "profile_picture": "https://i.pravatar.cc/300?img=5",
+      "bio": "Experienced software engineer."
+    },
+    {
+      "user_id": 2,
+      "email": "emily.n@globallogistics.com",
+      "first_name": "Emily",
+      "last_name": "Ndaba",
+      "title_prefix": "Ms",
+      "company_id": 2,
+      "profile_picture": "https://i.pravatar.cc/300?img=16",
+      "bio": "Logistics specialist."
+    }
+  ],
+  "contact_persons": [
+    {
+      "contact_id": 1,
+      "company_id": 1,
+      "user_id": 1
+    },
+    {
+      "contact_id": 2,
+      "company_id": 2,
+      "user_id": 2
+    }
+  ],
+  "tender_categories": [
+    {
+      "category_id": 1,
+      "category_name": "Software Development",
+      "parent_category_id": null
+    },
+    {
+      "category_id": 2,
+      "category_name": "Transportation Services",
+      "parent_category_id": null
+    }
+  ],
+  "tenders": [
+    {
+      "tender_id": 1,
+      "title": "Custom ERP System Development",
+      "description": "Develop a custom ERP system tailored to our needs.",
+      "category_id": 1,
+      "deadline": "2024-06-30",
+      "procuring_company_id": 2,
+      "status": "open",
+      "bid_opening_datetime": "2024-05-15T10:00:00",
+      "estimated_budget": 50000.00,
+      "location": "New York, USA",
+      "contact_person_name": "John Doe",
+      "contact_person_email": "john@example.com",
+      "contact_person_phone": "+1234567890",
+      "requirements": "Must have experience in ERP development.",
+      "visibility": "public",
+      "created_at": "2024-05-01T08:00:00",
+      "updated_at": "2024-05-05T15:30:00",
+      "approval_status": "pending"
+    },
+    {
+      "tender_id": 2,
+      "title": "Web Application Redesign",
+      "description": "Redesign our existing web application with a modern look and feel.",
+      "category_id": 1,
+      "deadline": "2024-07-15",
+      "procuring_company_id": 1,
+      "status": "open",
+      "bid_opening_datetime": "2024-06-01T09:00:00",
+      "estimated_budget": 20000.00,
+      "location": "San Francisco, USA",
+      "contact_person_name": "Jane Smith",
+      "contact_person_email": "jane@example.com",
+      "contact_person_phone": "+9876543210",
+      "requirements": "Experience in UX/UI design and front-end development.",
+      "visibility": "public",
+      "created_at": "2024-05-03T10:30:00",
+      "updated_at": "2024-05-06T14:00:00",
+      "approval_status": "approved"
+    },
+    {
+      "tender_id": 3,
+      "title": "Cloud Migration Project",
+      "description": "Migrate our infrastructure to the cloud for scalability and cost savings.",
+      "category_id": 1,
+      "deadline": "2024-08-10",
+      "procuring_company_id": 1,
+      "status": "open",
+      "bid_opening_datetime": "2024-06-15T14:00:00",
+      "estimated_budget": 30000.00,
+      "location": "Seattle, USA",
+      "contact_person_name": "Alice Johnson",
+      "contact_person_email": "alice@example.com",
+      "contact_person_phone": "+1122334455",
+      "requirements": "Expertise in AWS cloud services.",
+      "visibility": "public",
+      "created_at": "2024-05-05T12:00:00",
+      "updated_at": "2024-05-07T09:30:00",
+      "approval_status": "pending"
+    },
+    {
+      "tender_id": 4,
+      "title": "Mobile App Development",
+      "description": "Build a cross-platform mobile app for our product line.",
+      "category_id": 1,
+      "deadline": "2024-09-05",
+      "procuring_company_id": 2,
+      "status": "open",
+      "bid_opening_datetime": "2024-07-01T11:00:00",
+      "estimated_budget": 25000.00,
+      "location": "Los Angeles, USA",
+      "contact_person_name": "David Brown",
+      "contact_person_email": "david@example.com",
+      "contact_person_phone": "+3344556677",
+      "requirements": "Experience in React Native and mobile app design.",
+      "visibility": "public",
+      "created_at": "2024-05-05T12:00:00",
+      "updated_at": "2024-05-07T09:30:00",
+      "approval_status": "pending"
+    }
+  ],
+  "bids": [
+    {
+      "bid_id": 1,
+      "tender_id": 1,
+      "service_provider_id": 1,
+      "amount": 48000.00,
+      "proposal": "We have extensive experience in ERP development.",
+      "status": "pending"
+    },
+    {
+      "bid_id": 2,
+      "tender_id": 1,
+      "service_provider_id": 1,
+      "amount": 48000.00,
+      "proposal": "We have extensive experience in ERP development.",
+      "status": "pending"
+    }    
+  ],
+  "messages": [
+    {
+      "message_id": 1,
+      "sender_id": 1,
+      "receiver_id": 2,
+      "subject": "Regarding ERP System Development",
+      "content": "Hello Jane, I am interested in your ERP project.",
+      "timestamp": "2024-05-06T13:45:00"
+    }
+  ],
+  "bid_attachments": [
+    {
+      "attachment_id": 1,
+      "bid_id": 1,
+      "file_name": "proposal.pdf",
+      "file_path": "https://example.com/bid_attachments/proposal.pdf",
+      "file_type": "application/pdf"
+    }
+  ],
+  "notifications": [
+    {
+      "notification_id": 1,
+      "user_id": 2,
+      "message": "You have a new message regarding the ERP project.",
+      "is_read": false,
+      "timestamp": "2024-05-06T13:45:00"
+    }
+  ],
+  "audit_logs": [
+    {
+      "log_id": 1,
+      "action": "Login",
+      "user_id": 1,
+      "ip_address": "192.168.1.100",
+      "action_parameters": null,
+      "timestamp": "2024-05-08T09:30:00"
+    }
+  ]
+}
