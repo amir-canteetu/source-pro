@@ -10,6 +10,8 @@ export const dataProvider: DataProvider = {
 
     const data = await response.json();
 
+    console.log(data);
+
     return { data };
   },
   getApiUrl: () => API_URL,

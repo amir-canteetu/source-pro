@@ -1,7 +1,7 @@
 import { useOne, useUpdate } from "@refinedev/core";
 
 export const EditTender = () => {
-  const { data, isLoading } = useOne({ resource: "tenders", id: 1 });
+  const { data, isLoading } = useOne({ resource: "tenders", tender_id: 1 });
   const { mutate, isLoading: isUpdating } = useUpdate();
 
   if (isLoading) {
