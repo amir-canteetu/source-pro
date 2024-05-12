@@ -9,8 +9,8 @@ import { CreateTender } from "./pages/tenders/create";
 export default function App(): JSX.Element {
   return (
     <Refine dataProvider={dataProvider}>
-      {/* <ShowProduct /> */}
-      <EditTender />
+      <ShowTender />
+      {/* <EditTender /> */}
       {/* <ListTenders /> */}
       {/* <CreateTender /> */}
     </Refine>

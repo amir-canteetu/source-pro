@@ -4,7 +4,7 @@ export const ListTenders = () => {
     const { data, isLoading } = useList({
         resource: "tenders",
         pagination: { current: 1, pageSize: 10 },
-        sorters: [{ field: "title", order: "DESC" }],
+        sorters: [{ field: "title", order: "asc" }],
         filters: [{ field: "location", operator: "eq", value: "Houston" }],
       });
 

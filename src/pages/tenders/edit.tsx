@@ -1,28 +1,52 @@
-import { useOne, useUpdate } from "@refinedev/core";
+import { useForm, useSelect } from "@refinedev/core";
 
 export const EditTender = () => {
-  const { data, isLoading } = useOne({ resource: "tenders", tender_id: 1 });
-  const { mutate, isLoading: isUpdating } = useUpdate();
+  const { onFinish, mutationResult, queryResult } = useForm({
+    action: "edit",
+    resource: "tenders",
+    id: "1",
+  });
 
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
+  const record = queryResult.data?.data;
 
-  const updatePrice = async () => {
-    await mutate({
-      resource: "tenders",
-      tender_id: 1,
-      values: {
-        estimated_budget: Math.floor(Math.random() * 100),
-      },
+  // const { options } = useSelect({
+  //   resource: "categories",
+  // });
+
+  const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    // Using FormData to get the form values and convert it to an object.
+    const data = Object.fromEntries(new FormData(event.target).entries());
+    // Calling onFinish to submit with the data we've collected from the form.
+    onFinish({
+      ...data,
+      estimated_budget: Number(data.estimated_budget).toFixed(2)
     });
   };
 
   return (
-    <div>
-      <div>Product name: {data?.data.title}</div>
-      <div>Product price: ${data?.data.estimated_budget}</div>
-      <button onClick={updatePrice}>Update Price</button>
-    </div>
+    <form onSubmit={onSubmit}>
+      <label htmlFor="name">Name</label>
+      <input type="text" id="title" name="title" defaultValue={record?.title} />
+
+      <label htmlFor="description">Description</label>
+      <textarea
+        id="requirements"
+        name="requirements"
+        defaultValue={record?.requirements}
+      />
+
+      <label htmlFor="price">Price</label>
+      <input
+        type="text"
+        id="estimated_budget"
+        name="estimated_budget"
+        pattern="\d*\.?\d*"
+        defaultValue={record?.estimated_budget}
+      />
+
+      {mutationResult.isSuccess && <span>successfully submitted!</span>}
+      <button type="submit">Submit</button>
+    </form>
   );
 };
