@@ -4,8 +4,8 @@ export const ListTenders = () => {
     const { data, isLoading } = useList({
         resource: "tenders",
         pagination: { current: 1, pageSize: 10 },
-        sorters: [{ field: "title", order: "asc" }],
-        filters: [{ field: "location", operator: "eq", value: "Houston" }],
+        sorters: [{ field: "title", order: "ASC" }],
+        filters: [{ field: "location", operator: "eq", value: "Paris" }],
       });
 
   if (isLoading) {
@@ -17,7 +17,7 @@ export const ListTenders = () => {
       <h1>Tenders</h1>
       <ul>
         {data?.data?.map((tender) => (
-          <li key={tender.tender_id}>
+          <li key={tender.id}>
             <p>
               {tender.title}
               <br />

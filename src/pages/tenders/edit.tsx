@@ -28,14 +28,16 @@ export const EditTender = () => {
     <form onSubmit={onSubmit}>
       <label htmlFor="name">Name</label>
       <input type="text" id="title" name="title" defaultValue={record?.title} />
-
+      <br />
+      <br />
       <label htmlFor="description">Description</label>
       <textarea
         id="requirements"
         name="requirements"
         defaultValue={record?.requirements}
       />
-
+  <br />
+  <br />
       <label htmlFor="price">Price</label>
       <input
         type="text"
@@ -44,7 +46,8 @@ export const EditTender = () => {
         pattern="\d*\.?\d*"
         defaultValue={record?.estimated_budget}
       />
-
+<br />
+<br />
       {mutationResult.isSuccess && <span>successfully submitted!</span>}
       <button type="submit">Submit</button>
     </form>
