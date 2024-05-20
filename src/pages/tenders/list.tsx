@@ -1,12 +1,12 @@
 import { useList } from "@refinedev/core";
 
 export const ListTenders = () => {
-    const { data, isLoading } = useList({
-        resource: "tenders",
-        pagination: { current: 1, pageSize: 10 },
-        sorters: [{ field: "title", order: "ASC" }],
-        filters: [{ field: "location", operator: "eq", value: "Paris" }],
-      });
+  const { data, isLoading } = useList({
+    resource: "tenders",
+    pagination: { current: 1, pageSize: 10 },
+    sorters: [{ field: "title", order: "ASC" }],
+    filters: [{ field: "location", operator: "eq", value: "Houston" }],
+  });
 
   if (isLoading) {
     return <div>Loading...</div>;
